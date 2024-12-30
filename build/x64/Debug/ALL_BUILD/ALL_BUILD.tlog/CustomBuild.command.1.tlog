@@ -1,0 +1,10 @@
+^C:\USERS\CESTBON\DESKTOP\SS_LAB\REMOTE_APP\REMOTE_APP\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Cestbon/Desktop/ss_lab/remote_app/remote_app -BC:/Users/Cestbon/Desktop/ss_lab/remote_app/remote_app/build --check-stamp-file C:/Users/Cestbon/Desktop/ss_lab/remote_app/remote_app/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
